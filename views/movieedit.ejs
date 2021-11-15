@@ -1,0 +1,43 @@
+<%-include('./partials/header'); %>
+
+
+<%var id=movie._id
+var link1='/movies'+'/edit/'+id;
+%>
+
+<form class="m-5 "  action=<%=link1%> method="POST">
+    <div class="mb-3">
+      <label for="" class="form-label">Movie name</label>
+      <input type="text" class="form-control" value=<%=movie.Moviename%> name="Moviename" id="fn" aria-describedby="">
+      
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Lead Actor name</label>
+      <input type="string" class="form-control" value=<%=movie.Lead_actor_name%> name="Lead_actor_name" id="mn">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Lead Actreee name</label>
+        <input type="text" class="form-control" value=<%=movie.Lead_actress_name%> name="Lead_actress_name" id="ln">
+      </div>
+    
+      
+      <div class="mb-3">
+        <label for="" class="form-label">Budget($)</label>
+        <input type="number" class="form-control" value=<%=movie.Budget_in_dollar%> name="Budget_in_dollar" id="class">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Director Name</label>
+        <input type="text" class="form-control" value=<%=movie.Directorname%> name="Directorname" id="ln">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Country</label>
+        <input type="text" class="form-control" value=<%=movie.Country%> name="Country" id="ln">
+      </div>
+
+      
+      
+        
+           <button type="submit" class="btn" style="background-color:#c09f80;">Submit</button>
+  </form>
+  
+  <%-include('./partials/footer'); %>

@@ -1,0 +1,44 @@
+<%-include('./partials/header'); %>
+
+
+
+<form class="m-5 " action="/movies/" method="POST">
+    <div class="mb-3">
+      <label for="" class="form-label">Movie name</label>
+      <input type="text" class="form-control" name="Moviename" id="fn" aria-describedby="">
+      
+    </div>
+    <div class="mb-3">
+      <label for="" class="form-label">Lead Actor name</label>
+      <input type="string" class="form-control" name="Lead_actor_name" id="mn">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Lead Actress name</label>
+        <input type="text" class="form-control" name="Lead_actress_name" id="ln">
+      </div>
+    
+      
+      <div class="mb-3">
+        <label for="" class="form-label">Budget($)</label>
+        <input type="number" class="form-control" name="Budget_in_dollar" id="class">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Director Name</label>
+        <input type="text" class="form-control" name="Directorname" id="ln">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Country</label>
+        <input type="text" class="form-control" name="Country" id="ln">
+      </div>
+      <div class="mb-3">
+        <label for="" class="form-label">Detail</label>
+        <textarea class="form-control" name="Detail" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+        
+      </div>
+    
+      
+    <button type="submit" class="btn" style="background-color:#c09f80;">Submit</button>
+  </form>
+ 
+  <%-include('./partials/footer'); %>

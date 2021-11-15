@@ -1,0 +1,49 @@
+<%-include('./partials/header'); %>
+<h1></h1>
+<div class="bg-light">
+<table class="table bg-light  shadow ml-3 mr-3 mb-3" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movie name</th>
+        <th scope="col">Lead Actor name</th>
+        <th scope="col">Lead Actress name</th>
+        <th scope="col">Budget($)</th>
+        <th scope="col">Director name</th>
+        <th scope="col">Country</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <%for(var i=0;i<=movies.length-1;i++){%>  
+      <tr class="border border-dark">
+        <td><%=(i+1)%></th>
+        <td><%=movies[i].Moviename%></td>
+        <td><%=movies[i].Lead_actor_name%></td>
+        <td><%=movies[i].Lead_actress_name%></td>
+        <td><%=movies[i].Budget_in_dollar%></td>
+        <td><%=movies[i].Directorname%></td>
+        <td><%=movies[i].Country%></td>
+        <%var id=movies[i]._id
+        var link1='/movies'+'/edit/'+id;
+        var link2='/movies'+'/delete/'+id;
+        var link3='/movies'+'/detail/'+id;
+        %>
+        <td><a href=<%=link1%> class="btn" style="background-color:#c09f80;">Edit</a>
+        </td>
+        <td><a href=<%=link2%>  class="btn" style="background-color:#c09f80;">Delete</a>
+        </td>
+        <td><a href=<%=link3%> class="btn" style="background-color:#c09f80;">see Detail</a>
+        </td>
+        
+      </tr>
+      <%} %>
+              </tbody>
+  </table>
+     
+  <a href="/movies/create/" class="btn m-1" style="background-color:#c09f80;">Create New Meal</a>
+</div>     
+  <%-include('./partials/footer'); %>
+
